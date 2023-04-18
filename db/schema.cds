@@ -14,7 +14,7 @@ entity Employees : managed { // managed - createdAt, createdBy, modifiedAt, modi
 entity Managers : managed {
     key ID       : UUID  @(Core.Computed : true);
     name         : String(50);
-    practice     : String(20);
+    practice     : String(50);
     role         : String(50);
     emps         : Association to many Employees on emps.mgr = $self; // One Manager mapped to multiple employees
 }
