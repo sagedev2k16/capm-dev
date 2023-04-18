@@ -1,0 +1,33 @@
+{
+  "name": "capm_test_project",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^6",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "@sap/ux-specification": "^1.108.3",
+    "sqlite3": "^5"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-org": "cds watch --open org/webapp/index.html?sap-ui-xx-viewCache=false"
+  },
+  "cds": {
+    "requires": {
+        "db": {
+            "kind": "hana"
+        }
+    },
+    "hana": {
+        "deploy-format": "hdbtable"
+    }
+  },
+  "sapux": [
+    "app/org"
+  ]
+}
